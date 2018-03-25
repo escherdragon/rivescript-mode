@@ -109,10 +109,10 @@
 (font-lock-add-keywords
  'rivescript-mode
  '(
-   ("^\s*[+@].*" 0 'rivescript-trigger-face t)
-   ("^\s*%.*" 0 'rivescript-previous-face t)
-   ("^\s*[-^*].*" 0 'rivescript-reply-face t)
-   ("^>\s\\(?:begin\\|topic\s[a-zA-Z0-9_]+\\|object\s[a-zA-Z0-9_]+\s[a-zA-Z0-9_]+\\)$" 0 'rivescript-block-face t)
+   ("^[\s\t]*[+@].*" 0 'rivescript-trigger-face t)
+   ("^[\s\t]*%.*" 0 'rivescript-previous-face t)
+   ("^[\s\t]*[-^*].*" 0 'rivescript-reply-face t)
+   ("^>\s\\(?:begin\\|topic\s[a-zA-Z0-9_]+.*\\|object\s[a-zA-Z0-9_]+\s[a-zA-Z0-9_]+.*\\)$" 0 'rivescript-block-face t)
    ("^<\s\\(?:begin\\|topic$\\|object\\)$" 0 'rivescript-block-face t)
 
    ("<call>.*?</call>" 0 'rivescript-call-face t)
@@ -123,7 +123,7 @@
    ("<id>\\|<person>\\|<formal>\\|<sentence>\\|<uppercase>\\|<lowercase>" 0 'rivescript-call-face t)
 
    ("//.*" 0 'rivescript-comment-face t)
-   ("{\\(?:topic\\|weight\\|random\\)=.*?}" 0 'rivescript-control-flow-face t)
+   ("{\\(?:topic\\|weight\\|random\\)=.+?}" 0 'rivescript-control-flow-face t)
    ("{/?random}\\|{ok}" 0 'rivescript-control-flow-face t)
    ("\\\\[sn]" 0 'rivescript-space-face t)
    ("\\_<=>\\_>" 0 'rivescript-arrow-face t)
