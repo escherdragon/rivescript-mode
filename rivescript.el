@@ -117,8 +117,8 @@
 
    ("<call>.*?</call>" 0 'rivescript-call-face t)
    ("\\(?:{@[^}]*}\\|<@>\\|{@}\\)" 0 'rivescript-trigger-face t)
-   ("<\\(?:add\\|sub\\|mult\\|div\\).*?>" 0 'rivescript-call-face t)
-   ("<\\(?:[gs]et\\|bot\\).*?>" 0 'rivescript-variable-face t)
+   ("<\\(?:add\\|sub\\|mult\\|div\\)\s+.*?>" 0 'rivescript-call-face t)
+   ("<\\(?:[gs]et\\|bot\\)\s+.*?>" 0 'rivescript-variable-face t)
    ("<\\(?:\\(?:bot\\)?star\\|input\\|reply\\|env\\)[0-9]*?>" 0 'rivescript-variable-face t)
    ("<id>\\|<person>\\|<formal>\\|<sentence>\\|<uppercase>\\|<lowercase>" 0 'rivescript-call-face t)
 
